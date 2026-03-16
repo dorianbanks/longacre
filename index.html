@@ -342,6 +342,139 @@
       color: var(--mid-brown);
     }
 
+    /* --- LISTINGS --- */
+    .listings {
+      background: var(--cream);
+      padding: var(--section-pad);
+    }
+    .listings-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 44px;
+    }
+    .listings-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 16px;
+    }
+    .listing-card {
+      background: var(--white);
+      border-radius: 3px;
+      overflow: hidden;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .listing-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(44,36,32,0.12);
+    }
+    .listing-photo {
+      position: relative;
+      height: 220px;
+      overflow: hidden;
+    }
+    .listing-featured .listing-photo { height: 300px; }
+    .listing-photo img { transition: transform 0.4s; }
+    .listing-card:hover .listing-photo img { transform: scale(1.04); }
+    .listing-tag {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: var(--gold);
+      color: #1a1008;
+      font-family: var(--font-sans);
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 1px;
+    }
+    .listing-tag-new { background: var(--warm-black); color: var(--gold); }
+    .listing-info { padding: 20px 22px 24px; }
+    .listing-price {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      color: var(--warm-black);
+      margin-bottom: 6px;
+    }
+    .listing-address {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      color: var(--mid-brown);
+      margin-bottom: 14px;
+      line-height: 1.4;
+    }
+    .listing-details {
+      display: flex;
+      gap: 16px;
+      font-family: var(--font-sans);
+      font-size: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--slate-brown);
+    }
+
+    /* --- NEIGHBOURHOODS --- */
+    .neighbourhoods {
+      background: var(--deep-dark);
+      padding: var(--section-pad);
+    }
+    .neighbourhoods-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 44px;
+    }
+    .neighbourhoods-sub {
+      font-family: var(--font-sans);
+      font-size: 15px;
+      line-height: 1.65;
+      color: rgba(247,242,235,0.45);
+      text-align: right;
+      max-width: 280px;
+    }
+    .neighbourhoods-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3px;
+    }
+    .neighbourhood-card {
+      position: relative;
+      height: 210px;
+      overflow: hidden;
+      display: block;
+      text-decoration: none;
+    }
+    .neighbourhood-card img {
+      transition: transform 0.45s ease;
+    }
+    .neighbourhood-card:hover img {
+      transform: scale(1.07);
+    }
+    .neighbourhood-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(20,15,10,0.88) 0%, transparent 60%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 18px 20px;
+    }
+    .neighbourhood-name {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      color: var(--white);
+      font-weight: normal;
+      margin-bottom: 4px;
+    }
+    .neighbourhood-count {
+      font-family: var(--font-sans);
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
     /* --- SCROLL INDICATOR --- */
     .hero-scroll {
       position: absolute;
@@ -473,6 +606,131 @@
           <h3 class="step-title">Seamless Execution</h3>
           <p class="step-body">From first showing to final signature, Joe is available, transparent, and focused on getting you the best outcome — with none of the stress.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="listings" class="listings">
+    <div class="listings-inner container">
+      <div class="listings-header">
+        <h2 class="section-title" style="margin-bottom:0">Featured Listings</h2>
+        <a href="#" class="btn-ghost btn-ghost-dark">View All Listings →</a>
+      </div>
+      <div class="listings-grid">
+        <!-- Featured (large) -->
+        <article class="listing-card listing-featured">
+          <div class="listing-photo">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&q=80" alt="Yaletown condo interior">
+            <span class="listing-tag">Featured</span>
+          </div>
+          <div class="listing-info">
+            <div class="listing-price">$1,895,000</div>
+            <div class="listing-address">1204 – 1099 Marinaside Crescent, Yaletown</div>
+            <div class="listing-details">
+              <span>2 Bed</span>
+              <span>2 Bath</span>
+              <span>1,180 sqft</span>
+            </div>
+          </div>
+        </article>
+        <!-- Card 2 -->
+        <article class="listing-card">
+          <div class="listing-photo">
+            <img src="https://images.unsplash.com/photo-1565182999561-18d7dc61c393?w=600&q=80" alt="Cambie condo">
+            <span class="listing-tag listing-tag-new">New</span>
+          </div>
+          <div class="listing-info">
+            <div class="listing-price">$1,249,000</div>
+            <div class="listing-address">305 – 2628 Ash St, Cambie</div>
+            <div class="listing-details">
+              <span>1 Bed</span>
+              <span>1 Bath</span>
+              <span>720 sqft</span>
+            </div>
+          </div>
+        </article>
+        <!-- Card 3 -->
+        <article class="listing-card">
+          <div class="listing-photo">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="Dunbar house exterior">
+          </div>
+          <div class="listing-info">
+            <div class="listing-price">$2,450,000</div>
+            <div class="listing-address">2847 W 34th Ave, Dunbar</div>
+            <div class="listing-details">
+              <span>4 Bed</span>
+              <span>3 Bath</span>
+              <span>2,400 sqft</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="neighbourhoods" class="neighbourhoods">
+    <div class="neighbourhoods-inner container">
+      <div class="neighbourhoods-header">
+        <h2 class="section-title" style="color:var(--cream);margin-bottom:0">Explore the Neighbourhoods</h2>
+        <p class="neighbourhoods-sub">Every block in Vancouver has a different story.<br>Joe knows them all.</p>
+      </div>
+      <div class="neighbourhoods-grid">
+        <a href="#" class="neighbourhood-card">
+          <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=500&q=75" alt="Yaletown">
+          <div class="neighbourhood-overlay">
+            <div class="neighbourhood-name">Yaletown</div>
+            <div class="neighbourhood-count">8 Listings</div>
+          </div>
+        </a>
+        <a href="#" class="neighbourhood-card">
+          <img src="https://images.unsplash.com/photo-1562408590-e32931084e23?w=500&q=75" alt="Kitsilano">
+          <div class="neighbourhood-overlay">
+            <div class="neighbourhood-name">Kitsilano</div>
+            <div class="neighbourhood-count">5 Listings</div>
+          </div>
+        </a>
+        <a href="#" class="neighbourhood-card">
+          <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=500&q=75" alt="West End">
+          <div class="neighbourhood-overlay">
+            <div class="neighbourhood-name">West End</div>
+            <div class="neighbourhood-count">6 Listings</div>
+          </div>
+        </a>
+        <a href="#" class="neighbourhood-card">
+          <img src="https://images.unsplash.com/photo-1519010470956-6d877008eaa4?w=500&q=75" alt="Mt. Pleasant">
+          <div class="neighbourhood-overlay">
+            <div class="neighbourhood-name">Mt. Pleasant</div>
+            <div class="neighbourhood-count">4 Listings</div>
+          </div>
+        </a>
+        <a href="#" class="neighbourhood-card">
+          <img src="https://images.unsplash.com/photo-1538604838-07d4de2f8fcc?w=500&q=75" alt="False Creek">
+          <div class="neighbourhood-overlay">
+            <div class="neighbourhood-name">False Creek</div>
+            <div class="neighbourhood-count">3 Listings</div>
+          </div>
+        </a>
+        <a href="#" class="neighbourhood-card">
+          <img src="https://images.unsplash.com/photo-1514565131-fce0801e6785?w=500&q=75" alt="Gastown">
+          <div class="neighbourhood-overlay">
+            <div class="neighbourhood-name">Gastown</div>
+            <div class="neighbourhood-count">5 Listings</div>
+          </div>
+        </a>
+        <a href="#" class="neighbourhood-card">
+          <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=500&q=75" alt="Dunbar">
+          <div class="neighbourhood-overlay">
+            <div class="neighbourhood-name">Dunbar</div>
+            <div class="neighbourhood-count">4 Listings</div>
+          </div>
+        </a>
+        <a href="#" class="neighbourhood-card">
+          <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=500&q=75" alt="Cambie">
+          <div class="neighbourhood-overlay">
+            <div class="neighbourhood-name">Cambie</div>
+            <div class="neighbourhood-count">3 Listings</div>
+          </div>
+        </a>
       </div>
     </div>
   </section>
