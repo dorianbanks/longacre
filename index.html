@@ -538,6 +538,60 @@
       color: var(--slate-brown);
     }
 
+    /* --- MARKET UPDATE --- */
+    .market {
+      background: var(--white);
+      padding: var(--section-pad);
+    }
+    .market-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 44px;
+    }
+    .market-date {
+      font-family: var(--font-sans);
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--slate-brown);
+    }
+    .market-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3px;
+    }
+    .market-card {
+      background: var(--cream);
+      padding: 36px 32px;
+    }
+    .market-metric {
+      font-family: var(--font-serif);
+      font-size: 40px;
+      color: var(--warm-black);
+      margin-bottom: 8px;
+      line-height: 1;
+    }
+    .market-unit {
+      font-size: 22px;
+      color: var(--gold);
+    }
+    .market-desc {
+      font-family: var(--font-sans);
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--slate-brown);
+      margin-bottom: 10px;
+    }
+    .market-trend {
+      font-family: var(--font-sans);
+      font-size: 12px;
+    }
+    .market-trend-up   { color: var(--trend-green); }
+    .market-trend-down { color: var(--trend-red); }
+    .market-trend-neutral { color: var(--slate-brown); }
+
     /* --- SCROLL INDICATOR --- */
     .hero-scroll {
       position: absolute;
@@ -830,6 +884,37 @@
           <div class="mini-stars"><span>★★★★★</span></div>
           <p>"No pressure, no games. Joe just gave us the facts and let us make the right decision."</p>
           <div class="review-author">Anna F. — False Creek</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="market" class="market">
+    <div class="market-inner container">
+      <div class="market-header">
+        <h2 class="section-title" style="margin-bottom:0">Vancouver Market Update</h2>
+        <span class="market-date">March 2026</span>
+      </div>
+      <div class="market-grid">
+        <div class="market-card">
+          <div class="market-metric">$1.2<span class="market-unit">M</span></div>
+          <div class="market-desc">Median Sale Price</div>
+          <div class="market-trend market-trend-up">↑ 3.4% vs last month</div>
+        </div>
+        <div class="market-card">
+          <div class="market-metric">18</div>
+          <div class="market-desc">Avg. Days on Market</div>
+          <div class="market-trend market-trend-up">↓ 2 days vs last month</div>
+        </div>
+        <div class="market-card">
+          <div class="market-metric">142</div>
+          <div class="market-desc">Active Listings</div>
+          <div class="market-trend market-trend-up">↑ 12 new this week</div>
+        </div>
+        <div class="market-card">
+          <div class="market-metric">98<span class="market-unit">%</span></div>
+          <div class="market-desc">Sale-to-List Ratio</div>
+          <div class="market-trend market-trend-neutral">Strong seller's market</div>
         </div>
       </div>
     </div>
