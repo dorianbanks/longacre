@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Joe Longacre — Vancouver Real Estate</title>
   <meta name="description" content="Joe Longacre is a Vancouver real estate agent with Macdonald Realty. Where You Live Matters.">
+  <link rel="preconnect" href="https://images.unsplash.com">
   <style>
     /* --- RESET & BASE --- */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -23,6 +24,9 @@
       --mid-brown:    #5a4e44;
       --trend-green:  #5a7a60;
       --trend-red:    #a05a50;
+      --button-text:  #1a1008;
+      --gold-light:   #dbb97e;
+      --border-light: #e0d8cc;
 
       --font-serif: Georgia, 'Times New Roman', serif;
       --font-sans:  'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -161,7 +165,7 @@
     .btn-primary {
       display: inline-block;
       background: var(--gold);
-      color: #1a1008;
+      color: var(--button-text);
       padding: 15px 36px;
       font-family: var(--font-sans);
       font-size: 11px;
@@ -172,7 +176,7 @@
       transition: background 0.2s, transform 0.15s;
     }
     .btn-primary:hover {
-      background: #dbb97e;
+      background: var(--gold-light);
       transform: translateY(-1px);
     }
     .btn-ghost {
@@ -381,7 +385,7 @@
       top: 14px;
       left: 14px;
       background: var(--gold);
-      color: #1a1008;
+      color: var(--button-text);
       font-family: var(--font-sans);
       font-size: 9px;
       letter-spacing: 1.5px;
@@ -694,7 +698,7 @@
     }
     .form-field {
       background: var(--white);
-      border: 1px solid #e0d8cc;
+      border: 1px solid var(--border-light);
       border-radius: 2px;
       height: 46px;
       padding: 0 14px;
@@ -717,7 +721,7 @@
       height: 50px;
       margin-top: 8px;
       background: var(--gold);
-      color: #1a1008;
+      color: var(--button-text);
       border: none;
       border-radius: 2px;
       font-family: var(--font-sans);
@@ -727,7 +731,7 @@
       cursor: pointer;
       transition: background 0.2s;
     }
-    .form-submit:hover { background: #dbb97e; }
+    .form-submit:hover { background: var(--gold-light); }
 
     /* --- FOOTER --- */
     .footer {
@@ -840,11 +844,14 @@
     </nav>
   </header>
 
+  <main>
+
   <section class="hero">
     <div class="hero-bg">
       <img
         src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=1800&q=80"
         alt="Vancouver skyline at dusk"
+        fetchpriority="high"
       >
     </div>
     <div class="hero-overlay"></div>
@@ -874,13 +881,13 @@
       </div>
       <div class="about-collage">
         <div class="collage-photo collage-a">
-          <img src="https://images.unsplash.com/photo-1449844908441-8829872d2607?w=600&q=80" alt="Vancouver neighbourhood street">
+          <img src="https://images.unsplash.com/photo-1449844908441-8829872d2607?w=600&q=80" alt="Vancouver neighbourhood street" loading="lazy">
         </div>
         <div class="collage-photo collage-b">
-          <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80" alt="Modern Vancouver home exterior">
+          <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80" alt="Modern Vancouver home exterior" loading="lazy">
         </div>
         <div class="collage-photo collage-c">
-          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Vancouver waterfront">
+          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Vancouver waterfront" loading="lazy">
         </div>
       </div>
     </div>
@@ -945,7 +952,7 @@
         <!-- Featured (large) -->
         <article class="listing-card listing-featured">
           <div class="listing-photo">
-            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&q=80" alt="Yaletown condo interior">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&q=80" alt="Yaletown condo interior" loading="lazy">
             <span class="listing-tag">Featured</span>
           </div>
           <div class="listing-info">
@@ -961,7 +968,7 @@
         <!-- Card 2 -->
         <article class="listing-card">
           <div class="listing-photo">
-            <img src="https://images.unsplash.com/photo-1565182999561-18d7dc61c393?w=600&q=80" alt="Cambie condo">
+            <img src="https://images.unsplash.com/photo-1565182999561-18d7dc61c393?w=600&q=80" alt="Cambie condo" loading="lazy">
             <span class="listing-tag listing-tag-new">New</span>
           </div>
           <div class="listing-info">
@@ -977,7 +984,7 @@
         <!-- Card 3 -->
         <article class="listing-card">
           <div class="listing-photo">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="Dunbar house exterior">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="Dunbar house exterior" loading="lazy">
           </div>
           <div class="listing-info">
             <div class="listing-price">$2,450,000</div>
@@ -1001,56 +1008,56 @@
       </div>
       <div class="neighbourhoods-grid">
         <a href="#" class="neighbourhood-card">
-          <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=500&q=75" alt="Yaletown">
+          <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=500&q=75" alt="Yaletown" loading="lazy">
           <div class="neighbourhood-overlay">
             <div class="neighbourhood-name">Yaletown</div>
             <div class="neighbourhood-count">8 Listings</div>
           </div>
         </a>
         <a href="#" class="neighbourhood-card">
-          <img src="https://images.unsplash.com/photo-1562408590-e32931084e23?w=500&q=75" alt="Kitsilano">
+          <img src="https://images.unsplash.com/photo-1562408590-e32931084e23?w=500&q=75" alt="Kitsilano" loading="lazy">
           <div class="neighbourhood-overlay">
             <div class="neighbourhood-name">Kitsilano</div>
             <div class="neighbourhood-count">5 Listings</div>
           </div>
         </a>
         <a href="#" class="neighbourhood-card">
-          <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=500&q=75" alt="West End">
+          <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=500&q=75" alt="West End" loading="lazy">
           <div class="neighbourhood-overlay">
             <div class="neighbourhood-name">West End</div>
             <div class="neighbourhood-count">6 Listings</div>
           </div>
         </a>
         <a href="#" class="neighbourhood-card">
-          <img src="https://images.unsplash.com/photo-1519010470956-6d877008eaa4?w=500&q=75" alt="Mt. Pleasant">
+          <img src="https://images.unsplash.com/photo-1519010470956-6d877008eaa4?w=500&q=75" alt="Mt. Pleasant" loading="lazy">
           <div class="neighbourhood-overlay">
             <div class="neighbourhood-name">Mt. Pleasant</div>
             <div class="neighbourhood-count">4 Listings</div>
           </div>
         </a>
         <a href="#" class="neighbourhood-card">
-          <img src="https://images.unsplash.com/photo-1538604838-07d4de2f8fcc?w=500&q=75" alt="False Creek">
+          <img src="https://images.unsplash.com/photo-1538604838-07d4de2f8fcc?w=500&q=75" alt="False Creek" loading="lazy">
           <div class="neighbourhood-overlay">
             <div class="neighbourhood-name">False Creek</div>
             <div class="neighbourhood-count">3 Listings</div>
           </div>
         </a>
         <a href="#" class="neighbourhood-card">
-          <img src="https://images.unsplash.com/photo-1514565131-fce0801e6785?w=500&q=75" alt="Gastown">
+          <img src="https://images.unsplash.com/photo-1514565131-fce0801e6785?w=500&q=75" alt="Gastown" loading="lazy">
           <div class="neighbourhood-overlay">
             <div class="neighbourhood-name">Gastown</div>
             <div class="neighbourhood-count">5 Listings</div>
           </div>
         </a>
         <a href="#" class="neighbourhood-card">
-          <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=500&q=75" alt="Dunbar">
+          <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=500&q=75" alt="Dunbar" loading="lazy">
           <div class="neighbourhood-overlay">
             <div class="neighbourhood-name">Dunbar</div>
             <div class="neighbourhood-count">4 Listings</div>
           </div>
         </a>
         <a href="#" class="neighbourhood-card">
-          <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=500&q=75" alt="Cambie">
+          <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=500&q=75" alt="Cambie" loading="lazy">
           <div class="neighbourhood-overlay">
             <div class="neighbourhood-name">Cambie</div>
             <div class="neighbourhood-count">3 Listings</div>
@@ -1112,7 +1119,7 @@
         <div class="market-card">
           <div class="market-metric">18</div>
           <div class="market-desc">Avg. Days on Market</div>
-          <div class="market-trend market-trend-up">↓ 2 days vs last month</div>
+          <div class="market-trend market-trend-neutral">↓ 2 days vs last month</div>
         </div>
         <div class="market-card">
           <div class="market-metric">142</div>
@@ -1133,12 +1140,12 @@
       <p class="section-label" style="text-align:center">@joelongacre</p>
       <h2 class="section-title" style="text-align:center;margin-bottom:40px">Life in Vancouver</h2>
       <div class="instagram-grid">
-        <a href="#" class="insta-photo"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=75" alt="Vancouver life"></a>
-        <a href="#" class="insta-photo"><img src="https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=400&q=75" alt="Vancouver life"></a>
-        <a href="#" class="insta-photo"><img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=400&q=75" alt="Vancouver life"></a>
-        <a href="#" class="insta-photo"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=400&q=75" alt="Vancouver mountains"></a>
-        <a href="#" class="insta-photo"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=75" alt="BC mountains"></a>
-        <a href="#" class="insta-photo"><img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&q=75" alt="Pacific Northwest forest"></a>
+        <a href="#" class="insta-photo"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=75" alt="Vancouver life" loading="lazy"></a>
+        <a href="#" class="insta-photo"><img src="https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=400&q=75" alt="Vancouver life" loading="lazy"></a>
+        <a href="#" class="insta-photo"><img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=400&q=75" alt="Vancouver life" loading="lazy"></a>
+        <a href="#" class="insta-photo"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=400&q=75" alt="Vancouver mountains" loading="lazy"></a>
+        <a href="#" class="insta-photo"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=75" alt="BC mountains" loading="lazy"></a>
+        <a href="#" class="insta-photo"><img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&q=75" alt="Pacific Northwest forest" loading="lazy"></a>
       </div>
       <div style="text-align:center;margin-top:36px">
         <a href="#" class="btn-ghost btn-ghost-dark">Follow on Instagram →</a>
@@ -1154,15 +1161,15 @@
         <p class="contact-body">Whether you're buying your first place or your fifth, Joe is happy to start with a straightforward conversation — no pressure, no commitment.</p>
         <div class="contact-details">
           <div class="contact-detail">
-            <div class="contact-icon"></div>
+            <div class="contact-icon" aria-hidden="true"></div>
             <a href="tel:7789274306">778-927-4306</a>
           </div>
           <div class="contact-detail">
-            <div class="contact-icon"></div>
+            <div class="contact-icon" aria-hidden="true"></div>
             <a href="mailto:joe@joelongacre.com">joe@joelongacre.com</a>
           </div>
           <div class="contact-detail">
-            <div class="contact-icon"></div>
+            <div class="contact-icon" aria-hidden="true"></div>
             <span>2057 Commercial Drive, Vancouver BC</span>
           </div>
         </div>
@@ -1170,20 +1177,22 @@
       <div class="contact-form-wrap">
         <form class="contact-form" onsubmit="return false;">
           <div class="form-row">
-            <input class="form-field" type="text" placeholder="First Name" aria-label="First Name">
-            <input class="form-field" type="text" placeholder="Last Name" aria-label="Last Name">
+            <input class="form-field" type="text" placeholder="First Name" aria-label="First Name" name="first_name">
+            <input class="form-field" type="text" placeholder="Last Name" aria-label="Last Name" name="last_name">
           </div>
           <div class="form-row">
-            <input class="form-field form-field-full" type="email" placeholder="Email Address" aria-label="Email Address">
+            <input class="form-field form-field-full" type="email" placeholder="Email Address" aria-label="Email Address" name="email">
           </div>
           <div class="form-row">
-            <textarea class="form-field form-field-full form-field-textarea" placeholder="How can Joe help you?" aria-label="Message"></textarea>
+            <textarea class="form-field form-field-full form-field-textarea" placeholder="How can Joe help you?" aria-label="Message" name="message"></textarea>
           </div>
           <button type="submit" class="form-submit">Send Message</button>
         </form>
       </div>
     </div>
   </section>
+
+  </main>
 
   <footer class="footer">
     <div class="footer-inner container">
