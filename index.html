@@ -728,6 +728,41 @@
       transition: background 0.2s;
     }
     .form-submit:hover { background: #dbb97e; }
+
+    /* --- FOOTER --- */
+    .footer {
+      background: var(--darkest-dark);
+      border-top: 1px solid rgba(201,169,110,0.2);
+      padding: 44px 60px;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-logo {
+      font-family: var(--font-serif);
+      font-size: 16px;
+      letter-spacing: 2.5px;
+      color: rgba(247,242,235,0.45);
+    }
+    .footer-logo span { color: var(--gold); }
+    .footer-copy {
+      font-family: var(--font-sans);
+      font-size: 11px;
+      color: rgba(247,242,235,0.28);
+      letter-spacing: 0.5px;
+    }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a {
+      font-family: var(--font-sans);
+      font-size: 11px;
+      color: rgba(247,242,235,0.38);
+      text-decoration: none;
+      letter-spacing: 1px;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--gold); }
   </style>
 </head>
 <body>
@@ -1088,5 +1123,17 @@
       </div>
     </div>
   </section>
+
+  <footer class="footer">
+    <div class="footer-inner container">
+      <div class="footer-logo">JOE <span>LONGACRE</span></div>
+      <div class="footer-copy">© 2026 Joe Longacre · Macdonald Realty Ltd.</div>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#listings">Listings</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
