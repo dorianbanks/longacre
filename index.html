@@ -763,6 +763,67 @@
       transition: color 0.2s;
     }
     .footer-links a:hover { color: var(--gold); }
+
+    /* --- MOBILE (≤ 768px) --- */
+    @media (max-width: 768px) {
+      :root { --section-pad: 72px 24px; }
+
+      /* Nav */
+      .nav { padding: 20px 24px; }
+      .nav-links { display: none; }
+
+      /* Hero */
+      .hero { padding: 0 24px 80px; }
+      .hero-title { font-size: 48px; }
+      .hero-sub { font-size: 15px; }
+      .hero-scroll { display: none; }
+
+      /* About */
+      .about-inner { grid-template-columns: 1fr; gap: 40px; }
+      .about-collage { grid-template-rows: 180px 180px; }
+
+      /* Stats */
+      .stats-inner { flex-wrap: wrap; gap: 36px; justify-content: center; }
+
+      /* Process */
+      .process-steps { grid-template-columns: 1fr; gap: 3px; }
+
+      /* Listings */
+      .listings-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+      .listings-grid { grid-template-columns: 1fr; }
+      .listing-featured .listing-photo { height: 240px; }
+
+      /* Neighbourhoods */
+      .neighbourhoods-header { flex-direction: column; align-items: flex-start; gap: 12px; }
+      .neighbourhoods-sub { text-align: left; max-width: 100%; }
+      .neighbourhoods-grid { grid-template-columns: repeat(2, 1fr); }
+
+      /* Reviews */
+      .reviews-inner { grid-template-columns: 1fr; }
+      .reviews-quote { font-size: 20px; }
+      .reviews-grid { grid-template-columns: 1fr; }
+
+      /* Market */
+      .market-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+      .market-grid { grid-template-columns: 1fr 1fr; }
+
+      /* Instagram */
+      .instagram-grid { grid-template-columns: repeat(3, 1fr); }
+
+      /* Contact */
+      .contact-inner { grid-template-columns: 1fr; gap: 48px; }
+      .contact-form-wrap { padding: 32px 24px; }
+      .form-row { grid-template-columns: 1fr; }
+      .form-field-full { grid-column: 1; }
+
+      /* Section titles */
+      .section-title { font-size: 34px; }
+
+      /* Footer */
+      .footer { padding: 36px 24px; }
+      .footer-inner { flex-direction: column; gap: 16px; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
   </style>
 </head>
 <body>
