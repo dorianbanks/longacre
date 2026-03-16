@@ -199,6 +199,58 @@
       color: var(--gold);
     }
 
+    /* --- SHARED UTILITIES --- */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    .section-label {
+      font-family: var(--font-sans);
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 18px;
+    }
+    .section-title {
+      font-size: 46px;
+      line-height: 1.1;
+      font-weight: normal;
+      color: var(--warm-black);
+      margin-bottom: 28px;
+    }
+
+    /* --- ABOUT --- */
+    .about {
+      background: var(--cream);
+      padding: var(--section-pad);
+    }
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .about-body {
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--mid-brown);
+      margin-bottom: 20px;
+    }
+    .about-collage {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 200px 200px;
+      gap: 3px;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .collage-photo { overflow: hidden; }
+    .collage-a { grid-column: 1; grid-row: 1; }
+    .collage-b { grid-column: 2; grid-row: 1 / 3; }
+    .collage-c { grid-column: 1; grid-row: 2; }
+
     /* --- SCROLL INDICATOR --- */
     .hero-scroll {
       position: absolute;
@@ -259,6 +311,29 @@
     <div class="hero-scroll">
       <div class="hero-scroll-line"></div>
       <span>Scroll</span>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="about-inner container">
+      <div class="about-copy">
+        <p class="section-label">About Joe</p>
+        <h2 class="section-title">Real estate is personal.<br>It should feel that way.</h2>
+        <p class="about-body">After years in Vancouver's market, Joe has learned that the best transactions aren't just about price — they're about finding a place that fits your life. He brings clarity to a process that can feel overwhelming, and honesty to conversations that matter.</p>
+        <p class="about-body">Based at Macdonald Realty on Commercial Drive, Joe works across Vancouver's most sought-after neighbourhoods — from Yaletown to Kitsilano, Mt. Pleasant to the West End.</p>
+        <a href="tel:7789274306" class="btn-ghost btn-ghost-dark">778-927-4306 — Call Joe →</a>
+      </div>
+      <div class="about-collage">
+        <div class="collage-photo collage-a">
+          <img src="https://images.unsplash.com/photo-1449844908441-8829872d2607?w=600&q=80" alt="Vancouver neighbourhood street">
+        </div>
+        <div class="collage-photo collage-b">
+          <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80" alt="Modern Vancouver home exterior">
+        </div>
+        <div class="collage-photo collage-c">
+          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Vancouver waterfront">
+        </div>
+      </div>
     </div>
   </section>
 </body>
