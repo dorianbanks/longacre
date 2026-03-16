@@ -1135,5 +1135,14 @@
       </div>
     </div>
   </footer>
+  <script>
+    // Sticky nav: adds .scrolled class when page scrolls past 80px
+    const header = document.getElementById('site-header');
+    function updateNav() {
+      header.classList.toggle('scrolled', window.scrollY > 80);
+    }
+    window.addEventListener('scroll', updateNav, { passive: true });
+    updateNav();
+  </script>
 </body>
 </html>
