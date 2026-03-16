@@ -475,6 +475,69 @@
       color: var(--gold);
     }
 
+    /* --- REVIEWS --- */
+    .reviews {
+      background: var(--cream);
+      padding: var(--section-pad);
+    }
+    .reviews-inner {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .stars { display: flex; gap: 4px; margin-bottom: 22px; }
+    .star {
+      color: var(--gold);
+      font-size: 16px;
+    }
+    .reviews-quote {
+      font-family: var(--font-serif);
+      font-size: 26px;
+      line-height: 1.45;
+      color: var(--warm-black);
+      font-style: italic;
+      margin-bottom: 22px;
+    }
+    .reviews-cite {
+      font-family: var(--font-sans);
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--slate-brown);
+      font-style: normal;
+    }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .review-card {
+      background: var(--white);
+      padding: 26px 28px;
+      border-radius: 3px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .review-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 28px rgba(44,36,32,0.08);
+    }
+    .mini-stars { color: var(--gold); font-size: 12px; margin-bottom: 12px; }
+    .review-card p {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--mid-brown);
+      margin-bottom: 14px;
+    }
+    .review-author {
+      font-family: var(--font-sans);
+      font-size: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--slate-brown);
+    }
+
     /* --- SCROLL INDICATOR --- */
     .hero-scroll {
       position: absolute;
@@ -731,6 +794,43 @@
             <div class="neighbourhood-count">3 Listings</div>
           </div>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <div class="reviews-inner container">
+      <div class="reviews-hero">
+        <p class="section-label">Client Reviews</p>
+        <div class="stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <blockquote class="reviews-quote">
+          "Joe didn't just sell our home — he made sure we understood every step. In Vancouver's market, that kind of clarity is rare."
+        </blockquote>
+        <cite class="reviews-cite">Sarah &amp; Michael T. — Kitsilano</cite>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="mini-stars"><span>★★★★★</span></div>
+          <p>"Joe's knowledge of the Yaletown market is unmatched. We got above asking on the first week."</p>
+          <div class="review-author">David L. — Yaletown</div>
+        </div>
+        <div class="review-card">
+          <div class="mini-stars"><span>★★★★★</span></div>
+          <p>"First-time buyers and Joe made it feel manageable. Patient, honest, and genuinely invested."</p>
+          <div class="review-author">Priya M. — Mt. Pleasant</div>
+        </div>
+        <div class="review-card">
+          <div class="mini-stars"><span>★★★★★</span></div>
+          <p>"We were relocating from Toronto. Joe knew exactly which neighbourhoods fit our lifestyle."</p>
+          <div class="review-author">James &amp; Lin K. — West End</div>
+        </div>
+        <div class="review-card">
+          <div class="mini-stars"><span>★★★★★</span></div>
+          <p>"No pressure, no games. Joe just gave us the facts and let us make the right decision."</p>
+          <div class="review-author">Anna F. — False Creek</div>
+        </div>
       </div>
     </div>
   </section>
