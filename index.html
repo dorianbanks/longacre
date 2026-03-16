@@ -36,9 +36,77 @@
       background: var(--cream);
       color: var(--warm-black);
       -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+
+    /* --- NAV --- */
+    #site-header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+    #site-header.scrolled {
+      background: var(--cream);
+      box-shadow: 0 1px 20px rgba(44,36,32,0.1);
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 60px;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    .nav-logo {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      letter-spacing: 3px;
+      color: var(--white);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .nav-logo span { color: var(--gold); }
+    #site-header.scrolled .nav-logo { color: var(--warm-black); }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+    .nav-links a {
+      font-family: var(--font-sans);
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    #site-header.scrolled .nav-links a { color: var(--mid-brown); }
+    #site-header.scrolled .nav-links a:hover { color: var(--gold); }
+    .nav-cta {
+      border: 1px solid rgba(255,255,255,0.5) !important;
+      padding: 9px 20px !important;
+      border-radius: 2px;
+    }
+    #site-header.scrolled .nav-cta {
+      border-color: var(--slate-brown) !important;
     }
   </style>
 </head>
 <body>
+  <header id="site-header">
+    <nav class="nav">
+      <a href="#" class="nav-logo">JOE <span>LONGACRE</span></a>
+      <div class="nav-links">
+        <a href="#listings">Listings</a>
+        <a href="#neighbourhoods">Neighbourhoods</a>
+        <a href="#about">About</a>
+        <a href="#market">Market</a>
+        <a href="#contact" class="nav-cta">Get in Touch</a>
+      </div>
+    </nav>
+  </header>
 </body>
 </html>
