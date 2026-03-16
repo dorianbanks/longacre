@@ -639,6 +639,95 @@
       height: 54px;
       background: linear-gradient(to bottom, rgba(255,255,255,0.5), transparent);
     }
+
+    /* --- CONTACT --- */
+    .contact {
+      background: var(--warm-black);
+      padding: var(--section-pad);
+    }
+    .contact-inner {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .contact-body {
+      font-family: var(--font-sans);
+      font-size: 15px;
+      line-height: 1.8;
+      color: rgba(247,242,235,0.6);
+      margin-bottom: 40px;
+    }
+    .contact-details { display: flex; flex-direction: column; gap: 16px; }
+    .contact-detail {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-family: var(--font-sans);
+      font-size: 14px;
+      color: rgba(247,242,235,0.75);
+    }
+    .contact-detail a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .contact-detail a:hover { color: var(--gold); }
+    .contact-icon {
+      width: 32px;
+      height: 32px;
+      border: 1px solid rgba(201,169,110,0.35);
+      border-radius: 50%;
+      background: rgba(201,169,110,0.08);
+      flex-shrink: 0;
+    }
+    .contact-form-wrap {
+      background: var(--cream);
+      padding: 48px;
+      border-radius: 3px;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    .form-field {
+      background: var(--white);
+      border: 1px solid #e0d8cc;
+      border-radius: 2px;
+      height: 46px;
+      padding: 0 14px;
+      font-family: var(--font-sans);
+      font-size: 13px;
+      color: var(--warm-black);
+      outline: none;
+      transition: border-color 0.2s;
+      width: 100%;
+    }
+    .form-field:focus { border-color: var(--gold); }
+    .form-field-full { grid-column: 1 / -1; }
+    .form-field-textarea {
+      height: 110px;
+      padding: 14px;
+      resize: vertical;
+    }
+    .form-submit {
+      width: 100%;
+      height: 50px;
+      margin-top: 8px;
+      background: var(--gold);
+      color: #1a1008;
+      border: none;
+      border-radius: 2px;
+      font-family: var(--font-sans);
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .form-submit:hover { background: #dbb97e; }
   </style>
 </head>
 <body>
@@ -957,6 +1046,45 @@
       </div>
       <div style="text-align:center;margin-top:36px">
         <a href="#" class="btn-ghost btn-ghost-dark">Follow on Instagram →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="contact-inner container">
+      <div class="contact-copy">
+        <p class="section-label" style="color:var(--gold)">Let's Talk</p>
+        <h2 class="section-title" style="color:var(--cream);font-size:50px">Ready to find<br>where you belong?</h2>
+        <p class="contact-body">Whether you're buying your first place or your fifth, Joe is happy to start with a straightforward conversation — no pressure, no commitment.</p>
+        <div class="contact-details">
+          <div class="contact-detail">
+            <div class="contact-icon"></div>
+            <a href="tel:7789274306">778-927-4306</a>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-icon"></div>
+            <a href="mailto:joe@joelongacre.com">joe@joelongacre.com</a>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-icon"></div>
+            <span>2057 Commercial Drive, Vancouver BC</span>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-wrap">
+        <form class="contact-form" onsubmit="return false;">
+          <div class="form-row">
+            <input class="form-field" type="text" placeholder="First Name" aria-label="First Name">
+            <input class="form-field" type="text" placeholder="Last Name" aria-label="Last Name">
+          </div>
+          <div class="form-row">
+            <input class="form-field form-field-full" type="email" placeholder="Email Address" aria-label="Email Address">
+          </div>
+          <div class="form-row">
+            <textarea class="form-field form-field-full form-field-textarea" placeholder="How can Joe help you?" aria-label="Message"></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send Message</button>
+        </form>
       </div>
     </div>
   </section>
