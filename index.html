@@ -592,6 +592,29 @@
     .market-trend-down { color: var(--trend-red); }
     .market-trend-neutral { color: var(--slate-brown); }
 
+    /* --- INSTAGRAM --- */
+    .instagram {
+      background: var(--cream);
+      padding: var(--section-pad);
+    }
+    .instagram-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 4px;
+    }
+    .insta-photo {
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      display: block;
+    }
+    .insta-photo img {
+      transition: transform 0.4s, opacity 0.3s;
+    }
+    .insta-photo:hover img {
+      transform: scale(1.06);
+      opacity: 0.85;
+    }
+
     /* --- SCROLL INDICATOR --- */
     .hero-scroll {
       position: absolute;
@@ -916,6 +939,24 @@
           <div class="market-desc">Sale-to-List Ratio</div>
           <div class="market-trend market-trend-neutral">Strong seller's market</div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="instagram">
+    <div class="instagram-inner container">
+      <p class="section-label" style="text-align:center">@joelongacre</p>
+      <h2 class="section-title" style="text-align:center;margin-bottom:40px">Life in Vancouver</h2>
+      <div class="instagram-grid">
+        <a href="#" class="insta-photo"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=75" alt="Vancouver life"></a>
+        <a href="#" class="insta-photo"><img src="https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=400&q=75" alt="Vancouver life"></a>
+        <a href="#" class="insta-photo"><img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=400&q=75" alt="Vancouver life"></a>
+        <a href="#" class="insta-photo"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=400&q=75" alt="Vancouver mountains"></a>
+        <a href="#" class="insta-photo"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=75" alt="BC mountains"></a>
+        <a href="#" class="insta-photo"><img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&q=75" alt="Pacific Northwest forest"></a>
+      </div>
+      <div style="text-align:center;margin-top:36px">
+        <a href="#" class="btn-ghost btn-ghost-dark">Follow on Instagram →</a>
       </div>
     </div>
   </section>
