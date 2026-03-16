@@ -251,6 +251,33 @@
     .collage-b { grid-column: 2; grid-row: 1 / 3; }
     .collage-c { grid-column: 1; grid-row: 2; }
 
+    /* --- STATS BAR --- */
+    .stats-bar {
+      background: var(--deep-dark);
+      padding: 60px;
+    }
+    .stats-inner {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .stat { text-align: center; }
+    .stat-number {
+      font-family: var(--font-serif);
+      font-size: 48px;
+      color: var(--gold);
+      font-weight: normal;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .stat-label {
+      font-family: var(--font-sans);
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(247,242,235,0.45);
+    }
+
     /* --- SCROLL INDICATOR --- */
     .hero-scroll {
       position: absolute;
@@ -333,6 +360,27 @@
         <div class="collage-photo collage-c">
           <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Vancouver waterfront">
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-bar">
+    <div class="stats-inner container">
+      <div class="stat">
+        <div class="stat-number">12+</div>
+        <div class="stat-label">Years in Vancouver</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">300+</div>
+        <div class="stat-label">Homes Sold</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">98%</div>
+        <div class="stat-label">Client Satisfaction</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">8</div>
+        <div class="stat-label">Neighbourhoods</div>
       </div>
     </div>
   </section>
