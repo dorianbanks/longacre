@@ -70,9 +70,11 @@
     .nav-logo img {
       height: 42px;
       width: auto;
+      mix-blend-mode: screen;
       transition: filter 0.3s;
     }
     #site-header.scrolled .nav-logo img {
+      mix-blend-mode: normal;
       filter: brightness(0) sepia(1) saturate(0.4) brightness(0.35);
     }
     .nav-links {
@@ -751,6 +753,7 @@
     .footer-logo img {
       height: 36px;
       width: auto;
+      mix-blend-mode: screen;
       opacity: 0.55;
     }
     .footer-copy {
