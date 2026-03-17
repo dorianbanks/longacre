@@ -54,6 +54,10 @@
       background: var(--cream);
       box-shadow: 0 1px 20px rgba(44,36,32,0.1);
     }
+    #site-header.scrolled .nav {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
     .nav {
       display: flex;
       justify-content: space-between;
@@ -68,9 +72,10 @@
     .nav-logo img {
       height: 190px;
       width: auto;
-      transition: filter 0.3s;
+      transition: height 0.3s ease, filter 0.3s;
     }
     #site-header.scrolled .nav-logo img {
+      height: 64px;
       filter: brightness(0) sepia(1) saturate(0.4) brightness(0.35);
     }
     .nav-links {
