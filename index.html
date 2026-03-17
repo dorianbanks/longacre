@@ -63,15 +63,18 @@
       margin: 0 auto;
     }
     .nav-logo {
-      font-family: var(--font-serif);
-      font-size: 18px;
-      letter-spacing: 3px;
-      color: var(--white);
+      display: flex;
+      align-items: center;
       text-decoration: none;
-      transition: color 0.3s;
     }
-    .nav-logo span { color: var(--gold); }
-    #site-header.scrolled .nav-logo { color: var(--warm-black); }
+    .nav-logo img {
+      height: 42px;
+      width: auto;
+      transition: filter 0.3s;
+    }
+    #site-header.scrolled .nav-logo img {
+      filter: brightness(0) sepia(1) saturate(0.4) brightness(0.35);
+    }
     .nav-links {
       display: flex;
       gap: 32px;
@@ -745,13 +748,11 @@
       justify-content: space-between;
       align-items: center;
     }
-    .footer-logo {
-      font-family: var(--font-serif);
-      font-size: 16px;
-      letter-spacing: 2.5px;
-      color: rgba(247,242,235,0.45);
+    .footer-logo img {
+      height: 36px;
+      width: auto;
+      opacity: 0.55;
     }
-    .footer-logo span { color: var(--gold); }
     .footer-copy {
       font-family: var(--font-sans);
       font-size: 11px;
@@ -834,7 +835,7 @@
 <body>
   <header id="site-header">
     <nav class="nav">
-      <a href="#" class="nav-logo">JOE <span>LONGACRE</span></a>
+      <a href="#" class="nav-logo"><img src="logo.png" alt="Longacre Real Estate"></a>
       <div class="nav-links">
         <a href="#listings">Listings</a>
         <a href="#neighbourhoods">Neighbourhoods</a>
@@ -1197,7 +1198,7 @@
 
   <footer class="footer">
     <div class="footer-inner container">
-      <div class="footer-logo">JOE <span>LONGACRE</span></div>
+      <div class="footer-logo"><img src="logo.png" alt="Longacre Real Estate"></div>
       <div class="footer-copy">© 2026 Joe Longacre · Macdonald Realty Ltd.</div>
       <div class="footer-links">
         <a href="#">Privacy</a>
